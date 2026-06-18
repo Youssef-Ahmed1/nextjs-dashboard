@@ -8,51 +8,15 @@ importers:
 
   .:
     dependencies:
-      nextjs:
-        specifier: ^0.0.3
-        version: 0.0.3
-      node:
-        specifier: ^26.3.0
-        version: 26.3.0
-      nodejs:
+      all:
         specifier: ^0.0.0
         version: 0.0.0
-      pnpm:
-        specifier: ^11.8.0
-        version: 11.8.0
 
 packages:
 
-  nextjs@0.0.3:
-    resolution: {integrity: sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w==}
-    engines: {node: '>=0.8.21'}
-
-  node-bin-setup@1.1.4:
-    resolution: {integrity: sha512-vWNHOne0ZUavArqPP5LJta50+S8R261Fr5SvGul37HbEDcowvLjwdvd0ZeSr0r2lTSrPxl6okq9QUw8BFGiAxA==}
-
-  node@26.3.0:
-    resolution: {integrity: sha512-OVdvZlmzBofSGXrQlH+6TqMTVo6Bo+vg/u2x9a2ZQSJ/NE/BQfHGvvm6Spybnw55rCqK2GBASbrzCpOt/8hjGQ==}
-    engines: {npm: '>=5.0.0'}
-    hasBin: true
-
-  nodejs@0.0.0:
-    resolution: {integrity: sha512-1V+0HwaB/dhxzidEFc4uJ3k52gLI4B6YBZgJIofjwYCSAkD6CI0me6TDBT2QM2nbGWNxCHcq9/wVynzQYZOhUg==}
-
-  pnpm@11.8.0:
-    resolution: {integrity: sha512-wfXnxMskHI8XS3Q4UdgvQrgCMkr8iw8Ra5atsVqgZmSUjd42lgo7oQebpbSyndAUATW5S1tfUmNZIknWjlVfJg==}
-    engines: {node: '>=22.13'}
-    hasBin: true
+  all@0.0.0:
+    resolution: {integrity: sha512-0oKlfNVv2d+d7c1gwjGspzgbwot47PGQ4b3v1ccx4mR8l9P/Y6E6Dr/yE8lNT63EcAKEbHo6UG3odDpC/NQcKw==}
 
 snapshots:
 
-  nextjs@0.0.3: {}
-
-  node-bin-setup@1.1.4: {}
-
-  node@26.3.0:
-    dependencies:
-      node-bin-setup: 1.1.4
-
-  nodejs@0.0.0: {}
-
-  pnpm@11.8.0: {}
+  all@0.0.0: {}
