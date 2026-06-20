@@ -2,10 +2,24 @@ import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
-//
-export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"], plugins: { js }, extends: ["js/recommended"], languageOptions: { globals: globals.browser } },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-]);
+import { FlatCompat } from "@eslint/eslintrc";
+
+const compat = new FlatCompat();
+
+export default [
+    ...compat.extends("next/core-web-vitals"),
+    js.configs.recommended,
+    ...tseslint.configs.recommended,
+    pluginReact.configs.flat.recommended,
+
+    {
+        ignores: [".next/**", "out/**", "build/**", "next-env.d.ts"],
+        files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+            },
+        },
+    },
+];
